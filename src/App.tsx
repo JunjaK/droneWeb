@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import mainLayout from './layouts/mainLayout';
+import MainLayout from './layouts/MainLayout';
 
 const App:React.FC = () => {
   const [count, setCount] = useState(0);
 
   return (
     <div id='App'>
-      <span>Hello World</span>
+      <MainLayout />
     </div>
   );
 };

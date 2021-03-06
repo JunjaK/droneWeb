@@ -9,7 +9,7 @@
   "extends": [
     "airbnb",
     "airbnb/hooks",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -25,7 +25,7 @@
   "rules": {
     "linebreak-style": 0,
     "import/no-dynamic-require": 0,
-    "import/no-unresolved": 0,
+    "import/no-unresolved": [0],
     "import/prefer-default-export": 0,
     "global-require": 0,
     "import/no-extraneous-dependencies": 0,
@@ -41,6 +41,7 @@
     "no-shadow": "off",
     "react/prop-types": 0,
     "no-empty-pattern": 0,
+    "no-tabs": 0,
     "no-alert": 0,
     "react-hooks/exhaustive-deps": 0
   },
@@ -52,7 +53,7 @@
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       },
-      "typescript": "./tsconfig.json"
+      "typescript": {}
     }
   }
 }
