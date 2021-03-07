@@ -1,12 +1,12 @@
-import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import React, { ReactElement } from 'react';
+import { Container, Typography } from '@material-ui/core';
 
-function home():any {
+function Home():ReactElement {
   return (
-    <div>
-      <Typography>test111</Typography>
-    </div>
+    <Container>
+      <Typography variant='h5'>Real-Time Drone Simulation Info</Typography>
+    </Container>
   );
 }
 
-export default home;
+export default Home;

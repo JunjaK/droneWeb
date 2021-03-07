@@ -7,7 +7,7 @@ interface RouteType {
 	component: any
 }
 
-export default function RouterSwitch(): any {
+export default function RouterSwitch():React.ReactElement {
   return (
     <Switch>
       {Routes.map((route: RouteType) => (

@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Container, Typography } from '@material-ui/core';
 
-function Page404():any {
+function TodoPage():ReactElement {
   return (
     <Container>
-      <Typography>Todo Page</Typography>
+      <Typography variant='h6'>Todo Page</Typography>
     </Container>
   );
 }
 
-export default Page404;
+export default TodoPage;

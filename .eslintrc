@@ -44,7 +44,8 @@
     "no-empty-pattern": 0,
     "no-tabs": 0,
     "no-alert": 0,
-    "react-hooks/exhaustive-deps": 0
+    "react-hooks/exhaustive-deps": 0,
+    "react/destructuring-assignment": 0
   },
   "settings": {
     "import/parsers": {

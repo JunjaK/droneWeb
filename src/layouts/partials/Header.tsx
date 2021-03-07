@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import { Link } from 'react-router-dom';
 import {
   createStyles, makeStyles, Theme,
 } from '@material-ui/core/styles';
 import {
-  Toolbar, Typography, Button, ButtonGroup, IconButton, Grid, Divider,
+  Toolbar, Typography, IconButton, Grid, Divider,
 } from '@material-ui/core';
 import { Flight as FlightIcon } from '@material-ui/icons';
 
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   },
 }));
 
-export default function Header():any {
+export default function Header():ReactElement {
   const classes = useStyles();
 
   return (
@@ -56,7 +56,7 @@ export default function Header():any {
           <Grid container alignItems='center' justify='center' direction='row' className={classes.grid}>
             <Link to='/' className={classes.routerLink}>
               <Typography variant='subtitle1' className={classes.routerTypo}>
-                DroneWeb
+                RT-Map
               </Typography>
             </Link>
             <Divider

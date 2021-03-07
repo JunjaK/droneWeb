@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import {
   Container, Typography, List, ListItem, Divider,
 } from '@material-ui/core';
@@ -8,18 +8,22 @@ interface testData {
   id: number,
   title: string,
   content: string,
+  [PropName: string]: any;
 }
 
-function DynamicRouteList():any {
+function DynamicRouteList():ReactElement {
   const routeList = [];
   for (let i = 0; i < 15; i += 1) {
     const data:testData = {
       id: i + 1,
       title: `TestRoute${i + 1}`,
       content: `This is Test Dynamic Route Test Page${i + 1}`,
+      testData: `test${i}`,
+      testData2: `test2${i}`,
     };
     routeList.push(data);
   }
+
   return (
     <Container>
       <List>
