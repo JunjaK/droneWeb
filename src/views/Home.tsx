@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
-function main():any {
+function home():any {
   return (
     <div>
       <Typography>test111</Typography>
@@ -9,4 +9,4 @@ function main():any {
   );
 }
 
-export default main;
+export default home;

@@ -4,7 +4,7 @@ import { Container, Typography } from '@material-ui/core';
 function Page404():any {
   return (
     <Container>
-      <Typography>404Page</Typography>
+      <Typography>Todo Page</Typography>
     </Container>
   );
 }

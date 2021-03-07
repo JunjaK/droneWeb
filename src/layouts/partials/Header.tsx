@@ -1,23 +1,41 @@
 import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import { Link } from 'react-router-dom';
 import {
   createStyles, makeStyles, Theme,
 } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import {
+  Toolbar, Typography, Button, ButtonGroup, IconButton, Grid, Divider,
+} from '@material-ui/core';
+import { Flight as FlightIcon } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(1),
   },
   title: {
     flexGrow: 1,
+    fontWeight: 500,
+  },
+  routerLink: {
+    textDecoration: 'none',
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  routerTypo: {
+    fontWeight: 'bold',
+  },
+  grid: {
+    position: 'absolute',
+  },
+  dividerStyle: {
+    marginLeft: theme.spacing(5),
+    marginRight: theme.spacing(5),
+    background: '#dddddd',
+    width: '2px',
   },
 }));
 
@@ -29,12 +47,49 @@ export default function Header():any {
       <AppBar position='static'>
         <Toolbar>
           <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'>
-            <MenuIcon />
+            <FlightIcon />
           </IconButton>
           <Typography variant='h6' className={classes.title}>
-            News
+            DroneWeb
           </Typography>
-          <Button color='inherit'>Login</Button>
+
+          <Grid container alignItems='center' justify='center' direction='row' className={classes.grid}>
+            <Link to='/' className={classes.routerLink}>
+              <Typography variant='subtitle1' className={classes.routerTypo}>
+                DroneWeb
+              </Typography>
+            </Link>
+            <Divider
+              orientation='vertical'
+              flexItem
+              className={classes.dividerStyle}
+            />
+            <Link to='/database' className={classes.routerLink}>
+              <Typography variant='subtitle1' className={classes.routerTypo}>
+                Database
+              </Typography>
+            </Link>
+            <Divider
+              orientation='vertical'
+              flexItem
+              className={classes.dividerStyle}
+            />
+            <Link to='/analytics' className={classes.routerLink}>
+              <Typography variant='subtitle1' className={classes.routerTypo}>
+                Analytics
+              </Typography>
+            </Link>
+            <Divider
+              orientation='vertical'
+              flexItem
+              className={classes.dividerStyle}
+            />
+            <Link to='/test' className={classes.routerLink}>
+              <Typography variant='subtitle1' className={classes.routerTypo}>
+                Test
+              </Typography>
+            </Link>
+          </Grid>
         </Toolbar>
       </AppBar>
     </div>

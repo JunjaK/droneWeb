@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Header from '@/layouts/partials/Header';
 import Content from '@/router';
 
-import Theme from '@/layouts/partials/Theme';
+import Theme from '@/layouts/partials/theme';
 
 export default function MainLayout():any {
   return (
