@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import Some from '@/views/test/TypescriptPrac';
+import Theme from '@/layouts/partials/theme';
+import { ThemeProvider } from '@material-ui/core/styles';
 import MainLayout from './layouts/MainLayout';
 
-const App:React.FC = () => {
+const App: React.FC = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div id='App'>
+    <ThemeProvider theme={Theme}>
       <MainLayout />
       <Some />
-    </div>
+    </ThemeProvider>
   );
 };
 
